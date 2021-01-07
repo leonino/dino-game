@@ -1,7 +1,63 @@
+body {
+  background: #fafafafa;
+}
+
 .dino {
   width: 60px;
   height: 60px;
-  color: green;
+  background-image: url('/img/dino.png');
   position: absolute;
   bottom: 0px;
+  transition-duration: 0.4s;
+}
+
+.cactus {
+  width: 60px;
+  height: 60px;
+  left: 1000px;
+  background-image: url('/img/cactus.png');
+  position: absolute;
+  bottom: 0px;
+}
+
+.game-over {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666666;
+}
+
+.btn-iniciar {
+  background-color: green;
+  border: none;
+  border-radius: 5%;
+  color: white;
+  padding: 15px 32px;
+  transition-duration: 0.4s;
+}
+
+.btn-iniciar:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+@keyframes slideright {
+  from {
+    background-position: 70000%;
+  }
+  to {
+    background-position: 0;
+  }
+}
+
+.background {
+  position: absolute;
+  bottom: 0;
+  background-image: url(/img/background.png);
+  background-repeat: repeat-x;
+  animation: slideright 600s infinite linear;
+  width: 99%;
+  height: 200px;
 }
